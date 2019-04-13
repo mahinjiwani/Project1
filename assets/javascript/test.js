@@ -1,6 +1,6 @@
 console.log('test.js');
 
-let x = '';
+let pitbul = '0TnOYISbd1XYRBk9myaseg';
 
 $(document).ready(function(){
 
