@@ -1,39 +1,60 @@
-console.log('Connected');
+// Global varibles and objecs - SM
 
-
-// Spotify API
+// Spotify API - SM
 const sp_api = {
-  key:'BQCnz19Niy-zqiu_NUUkjFUzWlTwMeB5yF8XAabH_S7_NUj9BwzVBMNtrMFr0nOTZmgtyo-NcMhTGdCk6b2LKmVkrtbw_f4ZMkztEGomKYHF1RmDeGwDx_AG4ed4DHB0DC2DgyfJMQKGenfBvJ7JSMK5XJ-xL3DR_A',
+  key:'BQB-rC-7HDS5Iz6UWhoZQJgDbOyUtkg9Jo55ZP81m1aC2tQdkazAEzMFQDW9XpV8Y1RQR7YDy90QID11eFIm644e0rRRogqkoKl1PkcrfIZw0OiIX0oyhJbfKfguA_y8J3hFMWrXZmNxPELlSAHs6I8BLea34VEcjA',
 
-  // Search Artist
-  searchArtist: function(q){
+  // Search Artist - SM
+  searchArtist: function(query){
+    // results array will store searched queries
+    let results = [];
+
+    // New search clears results
     $.ajax({
-      url: `https://api.spotify.com/v1/search?q=${query}&type=track%2Cartist&market=US&limit=10&offset=5`,
+      url: `https://api.spotify.com/v1/search?q=${query}&type=artist&market=US&limit=50&offset=5`,
       method: 'GET',
-
+      headers: {
+        'Authorization': `Bearer ${sp_api.key}`
+      }
     }).then(function(response){
-      console.log(response);
+      response.artists.items.forEach(item =>{
+        // Create result object that stores important query information
+        const result = {
+          artist: item.name,
+          id: item.id,
+          sp_link:item.external_urls.spotify,
+          images: item.images
+          // genres
+        };
 
+        // Add single result to results array
+        results.push(result);
+      });
+      console.table(results);
+      // Return results
+      return results
     });
+  }//,
+
+  // getTopTracks: function(artist_id){
+  //   // results array will store searched queries
+  //   let results = [];
+  //
+  //   // New search clears results
+  //   $.ajax({
+  //     url: `https://api.spotify.com/v1/artists/${artist_id}/top-tracks`,
+  //     method: 'GET',
+  //     headers: {
+  //       'Authorization': `Bearer ${sp_api.key}`
+  //     }
+  //   }).then(function(response){
+  //     console.table(respones);
+  //
+  //     });
+  //   }
   }
-  // `https://api.spotify.com/v1/search?q=Muse&type=track%2Cartist&market=US&limit=10&offset=5`
-}
 
-// Youtube API
-const yt_api = {
-  key:''
-}
-
-// SoundCloud API
-const sc_api = {
-  key:''
-}
-
-// $.ajax({
-//   url: `https://api.spotify.com/v1/search?q=Muse&type=track%2Cartist&market=US&limit=10&offset=5`,
-//   method: 'GET',
-//
-// }).then(function(response){
-//   console.log(response);
-//
-// });
+// Youtube API object - SM
+// const yt_api = {
+//   key:''
+// }
