@@ -1,0 +1,44 @@
+h1 {
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-right: 44%;
+    margin-bottom: 100px;
+    font-size: 50px;
+    color: gold;
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.search-box {
+    background: black;
+    color: gold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-bottom: 60px;
+}
+
+#search-text {
+    margin-left: 20px;
+}
+
+#search-bar {
+    width: 80%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+#band-table {
+    background: black;
+    color: white;
+    margin-left: 15%;
+    margin-bottom: 60px;
+}
+
+.main-content {
+    background: black;
+    color: white;
+    text-align: center;
+}
