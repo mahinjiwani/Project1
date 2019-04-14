@@ -35,11 +35,25 @@ h1 {
     color: red;
 }
 
+#table-container {
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#table-title {
+    font-size: 30px;
+}
+
 #band-table {
     background: black;
     color: white;
     margin-left: 15%;
     margin-bottom: 60px;
+}
+.table-list {
+    color: gold !important;
 }
 
 .columns {

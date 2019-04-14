@@ -1,5 +1,5 @@
 // When the search button is pressed
-$("#search-button").on("click", function (event) {
+$("#search-button").on("click", function () {
     // Targets the input of user through the search bar
     var userInput = $("#search-bar").val();
     // Display user input into console (for test purposes so far)
@@ -63,6 +63,16 @@ function contentDisplay() {
 
 // Function to build the artist table
 function artistTable() {
+    // Changes background of container from white to black
+    $("#table-container").css("background", "black")
+    // Creates a paragraph div
+    var tableTitle = $("<p>");
+    // Adds an id to the paragraph div
+    tableTitle.attr("id", "table-title");
+    // Adds text to the paragraph div
+    tableTitle.html("Your Artist Searches:")
+    // Pushes the paragraph to the front of the table container
+    $("#table-container").prepend(tableTitle)
     // Create the main table div
     var bandTable = $("<table>");
     // Add classes to the table div
