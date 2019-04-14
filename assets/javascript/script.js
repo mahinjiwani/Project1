@@ -2,18 +2,27 @@
 $("#search-button").on("click", function (event) {
     // Targets the input of user through the search bar
     var userInput = $("#search-bar").val();
-    // Display user input into console
-    console.log(userInput)
+    // Display user input into console (for test purposes so far)
+    console.log(userInput);
     // Empties out the search bar field
-    $("#search-bar").val("")
-   // var tableEmpty = $("#table-div")
-   // var columnEmpty = $("#main-display")
-   // if (tableEmpty === null || tableEmpty === undefined || columnEmpty === null || columnEmpty === undefined) {
-        //Runs function to build the artist table
-        artistTable()
-        //Runs function to add the two columns for Spotify and Youtube
-        contentDisplay()
-   // }
+    $("#search-bar").val("");
+    // Determines whether the input field is empty or unreadable
+    if (userInput.length === 0 || userInput === null || userInput === undefined) {
+        // Displays instructions to type a name into the search bar
+        $("#empty-text").html("Please enter an artist name!");
+    }
+    // If the user put something into the search bar
+    else {
+        // Clears div in case instruction is already present on the page
+        $("#empty-text").html("");
+        // If both divs are empty on the webpage
+        if ($("#table-div").is(":empty") || $("#main-display").is(":empty")) {
+            //Runs function to build the artist table
+            artistTable();
+            //Runs function to add the two columns for Spotify and Youtube
+            contentDisplay();
+        }
+    }
 })
 
 
@@ -75,7 +84,7 @@ function artistTable() {
     // Adds the row to the able
     $(".head-list").append(tableList);
     // List of text for each cell of table header
-    var tableTitles = ["Artist Name", "Music Genre", "Songs", "Band Images", "Spotify Arist Link", "Youtube Arist Link"];
+    var tableTitles = ["Artist Name", "Music Genre", "Songs", "Band Images", "Spotify Artist Link", "Youtube Artist Link"];
     for (var i = 0; i < tableTitles.length; i++) {
         // Create a new div cell for length of variable list
         var headCell = $("<th>");
