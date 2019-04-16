@@ -2,7 +2,7 @@
 
 // Spotify API - SM
 const sp_api = {
-  key:'BQCqQvdRRK8Yk9hr7sqty5msNZ0rvECRQ0UCjoNqke1H-wLFH2AEcw9M7dUdknH2_ZB1OvT0zZ1hE1SYympq5xA_zxIyAoBpqPU51yVxzcjigtNCoZZY0CYLdtKlpZ9Tgm4jfQ_cTeo1gOitQxRE_3Y-uyfFRHE0zg',
+  key:'BQDgyHUmy9mvRRcFBO7ftbvtIA12JC_yLE1GNfXUflyh1zVaF_AaFF-wqkozHeVCRiUEZsrLApMfdkDC3yqotH5-iXtiHjO4om81-amhKtJb-2LwIZ7eT4vXEATUuX6sHSMd6cLC3J9SRt-1mb1m9Vlt2iEXkS7Ghw',
 
   // Search Artist - SM
   getArtists: function(query){
@@ -89,9 +89,9 @@ $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    
+
     console.log(response)
-            console.log(response.items[0].snippet.title) 
+            console.log(response.items[0].snippet.title)
             console.log(response.items[0].snippet.publishedAt)
             console.log(response.items[0].snippet.thumbnails.default.url)
             console.log(response.items[0].id.videoId)
@@ -105,7 +105,7 @@ $.ajax({
              }
 
 
-   
+
   });
 
   // function about search by username and channelId
@@ -115,7 +115,7 @@ $.ajax({
 var userName = "muse";
 var channelId
 var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
-  
+
     var queryURL2 = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername="+userName+"&key="+apiKey;
 
     $.ajax({
@@ -130,7 +130,7 @@ var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
             url: "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+channelId+"&type=video&key="+apiKey,
             method: "GET"
           }).then(function(response) {
-    
+
             console.log(response)
             console.log(response.items[0].snippet.title)
             console.log(response.items[0].snippet.publishedAt)
@@ -141,12 +141,8 @@ var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
 
 
-            
+
           });
 
 
       });
-
-
- 
-
