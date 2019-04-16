@@ -76,7 +76,8 @@ const sp_api = {
 
 
 // seacrh by keyword -- MH
-var keyword = "21 savage";
+var keyword = "21savage";
+// var keyword = $().val().trim()
 var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
 var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+keyword+ "&type=video&videoCategoryId=10&key="+apiKey
