@@ -76,7 +76,7 @@ const sp_api = {
 
 
 // seacrh by keyword -- MH
-var keyword = "Muse";
+var keyword = "21 savage";
 var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
 var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+keyword+ "&type=video&videoCategoryId=10&key="+apiKey
@@ -102,19 +102,15 @@ $.ajax({
                 var videoId = response.items[i].id.videoId;
 
                 var videoDiv = $("<div>");
-                var aboutTheVideo = $("<p>").html(songTitle+" "+publishedAt);
                 var link = "https://youtu.be/"+videoId;
-                console.log(link)
+                var aboutTheVideo = $("<a>").attr("href",link).html("<br>"+songTitle+"<br>"+publishedAt+"<br>");
 
                 var videoSrc = "https://www.youtube.com/embed/"+videoId;
                 var videoFrame = $("<iframe>").attr("src", videoSrc).attr("frameborder",0).attr("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
-
-
-                //<iframe width="560" height="315" src="https://www.youtube.com/embed/w8KQmps-Sog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                 videoDiv.prepend(aboutTheVideo);
                 videoDiv.prepend(videoFrame);
-
+                
                 $("#youTubeView").prepend(videoDiv);
 
 
