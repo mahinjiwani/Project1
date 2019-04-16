@@ -74,12 +74,8 @@ const sp_api = {
   }
 }
 
-// Youtube API object - SM
-// const yt_api = {
-//   key:''
-// }
 
-// seacrh by keyword
+// seacrh by keyword -- MH
 var keyword = "Muse";
 var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
@@ -97,9 +93,29 @@ $.ajax({
             console.log(response.items[0].id.videoId)
 
              for (let i=0;i<response.items.length;i++){
-                var songTitle = response.items[i].snippet.title;//song title
-                var publishedAt = response.items[i].snippet.publishedAt;//publish time
-                var videoId = response.items[i].id.videoId;//videoid, which imports the video
+
+              //song title
+                var songTitle = response.items[i].snippet.title;
+              //publish time
+                var publishedAt = response.items[i].snippet.publishedAt;
+              //videoid, which imports the video
+                var videoId = response.items[i].id.videoId;
+
+                var videoDiv = $("<div>");
+                var aboutTheVideo = $("<p>").html(songTitle+" "+publishedAt);
+                var link = "https://youtu.be/"+videoId;
+                console.log(link)
+
+                var videoSrc = "https://www.youtube.com/embed/"+videoId;
+                var videoFrame = $("<iframe>").attr("src", videoSrc).attr("frameborder",0).attr("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+
+
+                //<iframe width="560" height="315" src="https://www.youtube.com/embed/w8KQmps-Sog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                videoDiv.prepend(aboutTheVideo);
+                videoDiv.prepend(videoFrame);
+
+                $("#youTubeView").prepend(videoDiv);
 
 
              }
@@ -109,9 +125,7 @@ $.ajax({
   });
 
   // function about search by username and channelId
-
-
-
+/*
 var userName = "muse";
 var channelId
 var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
@@ -146,3 +160,10 @@ var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
 
       });
+<<<<<<< HEAD
+=======
+*/
+
+ 
+
+>>>>>>> 6ca61428409d6f64a9eddf2329b426769fdc1cea
