@@ -1,13 +1,22 @@
+body {
+background-image: url(https://estherbydesign.org/wp-content/uploads/2016/11/dbf59e_8848be87046949b3b8056926efe37002mv2.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+font-family: "open sans condensed", sans-serif;
+}
+
 h1 {
     margin-left: 35%;
-    margin-top: 20px;
-    margin-right: 44%;
+    margin-right: 34%;
     margin-bottom: 200px;
-    font-size: 50px;
+    font-size: 80px;
     color: gold;
     background: black;
     padding: 5px;
     border-radius: 10px;
+    font-family: "open sans condensed", sans-serif;
 }
 
 .search-box {
@@ -15,8 +24,8 @@ h1 {
     color: gold;
     padding: 10px;
     border-radius: 5px;
-    margin-left: 20%;
-    margin-right: 30%;
+    margin-left:25%;
+    margin-right: 25%;
     margin-bottom: 250px;
 }
 
@@ -25,9 +34,27 @@ h1 {
 }
 
 #search-bar {
-    width: 80%;
+    width: 70%;
     margin-left: 20px;
     margin-bottom: 5px;
+    color: white;
+    border-bottom: 2px solid gold;
+}
+
+#search-bar:focus {
+    border-bottom: 2px solid white;
+}
+
+#search-button {
+    color: white;
+    background: gold;
+    border: 2px solid white;
+}
+
+#search-button:hover {
+    color: gold;
+    background: white;
+    border: 2px solid gold;
 }
 
 #empty-text {
@@ -39,29 +66,42 @@ h1 {
     color: white;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: 100px;
     padding: 10px;
 }
 
 #table-title {
-    font-size: 30px;
+    font-size: 40px;
+}
+
+table {
+    border: 2px solid white !important;
+}
+
+th {
+    border: 2px solid white !important;
+    color: gold;
+    font-size: 17px;
+}
+
+td {
+    border: 2px solid white !important;
 }
 
 #band-table {
     background: black;
     color: white;
-    margin-left: 15%;
     margin-bottom: 60px;
-}
-.table-list {
-    color: gold !important;
-}
-
-.columns {
-    margin-top: 100px;
 }
 
 .main-content {
     background: black;
     color: white;
     text-align: center;
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+h4 {
+    color: gold;
 }

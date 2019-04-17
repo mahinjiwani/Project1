@@ -2,38 +2,47 @@
 <html lang="en">
 
 <head>
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAOr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERAAAAEAAAABEAAAAQAAAAERERABABEQAREREAEAERABEREQAQAREAEQAAABAAAAERAAAAEAAAAREAEREQAREAEQARERABEQARABEREAERABEAAAAQAAAAEQAAABAAAAAREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bulma.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/materialize.css">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
   <title>SoundBars App</title>
 </head>
 
 <body>
   <div class="container">
-    <h1>SoundBars</h1>
+    <div clas="row">
+      <div class="col s12">
+        <h1>SoundBars</h1>
+      </div>
+    </div>
+
 
     <br>
     <div class="search-box">
-      <p id="search-text">Search for a band:</p>
+      <p id="search-text">Search for an Artist:</p>
       <div class="field">
-        <input class="input is-warning" id="search-bar" type="text" placeholder="Band Name">
-        <a class="button is-warning" id="search-button">Search</a>
+        <input class="input is-warning" id="search-bar" type="text" placeholder="Artist Name">
+        <button class="btn waves-effect waves-light" id="search-button" type="submit" name="action">Search</button>
       </div>
       <div id="empty-text"></div>
     </div>
     <br>
     <div id="table-container">
-    <div id="table-div"></div>
+      <div id="table-div"></div>
     </div>
     <br>
-    <div class="columns" id="main-display">
-  </div>
+    <div id="main-display">
+        <div class="row">
+          </div>
+    </div>
 
-  <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
