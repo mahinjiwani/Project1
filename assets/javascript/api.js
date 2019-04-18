@@ -76,7 +76,7 @@ const sp_api = {
 
 
 // seacrh by keyword -- MH
-var keyword = "21savage";
+var keyword ="Muse";
 // var keyword = $().val().trim()
 var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
@@ -157,10 +157,4 @@ var apiKey = "AIzaSyCxI37dKTdAqPRZ2ObfcK2M7TaSXtr5F4c"
 
 
       });
-<<<<<<< HEAD
-=======
-*/
-
- 
-
->>>>>>> 6ca61428409d6f64a9eddf2329b426769fdc1cea
+      */
