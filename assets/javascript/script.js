@@ -35,9 +35,10 @@ $("#search-button").on("click", function () {
                 console.log(link)
                 var videoSrc = "https://www.youtube.com/embed/" + videoId;
                 var videoFrame = $("<iframe>").attr("src", videoSrc).attr("frameborder", 0).attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
-                //<iframe width="560" height="315" src="https://www.youtube.com/embed/w8KQmps-Sog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                console.log(videoSrc)
                 videoDiv.append(aboutTheVideo);
                 videoDiv.append(videoFrame);
+                
                 $("#youtube-content").append(videoDiv);
             }
         });
