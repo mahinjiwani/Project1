@@ -1,3 +1,17 @@
+// Initialize Firebase
+const config = {
+  apiKey: "AIzaSyBTcTmFZc0OHm47OPx2Dp8C1s5OwyfW8X0",
+  authDomain: "project1ingt.firebaseapp.com",
+  databaseURL: "https://project1ingt.firebaseio.com",
+  projectId: "project1ingt",
+  storageBucket: "project1ingt.appspot.com",
+  messagingSenderId: "809078972304"
+};
+firebase.initializeApp(config);
+var dataRef = firebase.database();
+
+
+
 // Global varibles and objecs - SM
 
 // Spotify API - SM
@@ -111,6 +125,8 @@ $.ajax({
                 
                 videoDiv.prepend(aboutTheVideo);
                 videoDiv.prepend(videoFrame);
+
+               
                 
                 $("#youTubeView").prepend(videoDiv);
 
