@@ -31,7 +31,7 @@ $("#search-button").on("click", function () {
                 var videoDiv = $("<div>");
                 videoDiv.attr("class", "youtube-video");            
                 var link = "https://youtu.be/" + videoId;
-                var aboutTheVideo = $("<a>").attr("href",link).html("<br>"+songTitle+"<br>"+publishedAt+"<br>");
+                var aboutTheVideo = $("<a>").attr("href",link).attr("target","_blank").html("<br>"+songTitle+"<br>"+publishedAt+"<br>");
                 console.log(link)
                 var videoSrc = "https://www.youtube.com/embed/" + videoId;
                 var videoFrame = $("<iframe>").attr("src", videoSrc).attr("frameborder", 0).attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
