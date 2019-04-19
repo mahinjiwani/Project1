@@ -30,8 +30,10 @@ $("#search-button").on("click", function () {
                 var videoId = response.items[i].id.videoId;//videoid, which imports the video
                 var videoDiv = $("<div>");
                 videoDiv.attr("class", "youtube-video");
-                var aboutTheVideo = $("<p>").html(songTitle + " " + publishedAt);
+               
                 var link = "https://youtu.be/" + videoId;
+                var aboutTheVideo = $("<a>").attr("href",link).html("<br>"+songTitle+"<br>"+publishedAt+"<br>");
+
                 console.log(link)
                 var videoSrc = "https://www.youtube.com/embed/" + videoId;
                 var videoFrame = $("<iframe>").attr("src", videoSrc).attr("frameborder", 0).attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
