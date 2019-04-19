@@ -137,6 +137,10 @@ $.ajax({
 
   });
 
+  //dataRef.ref("/past_searches").push({
+   // keyword 
+  // })
+
   // function about search by username and channelId
 /*
 var userName = "muse";
