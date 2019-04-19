@@ -29,18 +29,15 @@ $("#search-button").on("click", function () {
                 var publishedAt = response.items[i].snippet.publishedAt;//publish time
                 var videoId = response.items[i].id.videoId;//videoid, which imports the video
                 var videoDiv = $("<div>");
-                videoDiv.attr("class", "youtube-video");
-               
+                videoDiv.attr("class", "youtube-video");            
                 var link = "https://youtu.be/" + videoId;
                 var aboutTheVideo = $("<a>").attr("href",link).html("<br>"+songTitle+"<br>"+publishedAt+"<br>");
-
                 console.log(link)
                 var videoSrc = "https://www.youtube.com/embed/" + videoId;
                 var videoFrame = $("<iframe>").attr("src", videoSrc).attr("frameborder", 0).attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
                 console.log(videoSrc)
                 videoDiv.append(aboutTheVideo);
-                videoDiv.append(videoFrame);
-                
+                videoDiv.append(videoFrame);              
                 $("#youtube-content").append(videoDiv);
             }
         });
